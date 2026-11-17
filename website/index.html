@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263b32">
+  <meta name="description" content="探索苗栗在地美食，從客家料理、巷弄小吃到甜點咖啡，找到下一站好滋味。">
+  <title>苗栗食旅誌｜探索在地好滋味</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="苗栗食旅誌首頁"><span class="brand-mark">食</span><span>苗栗食旅誌<small>MIAOLI FOOD JOURNAL</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#discover">探索美食</a><a href="#regions">依地區找</a><a href="#about">關於本站</a>
+      <button class="saved-nav" id="showSaved">♡ 我的收藏 <span id="savedCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">TASTE THE LOCAL · MIAOLI, TAIWAN</p>
+        <h1>走進苗栗，<br><em>吃一口在地的美好。</em></h1>
+        <p class="hero-copy">從客家老味道到巷弄裡的驚喜，<br class="desktop-only">帶你收藏每一段值得回味的美食旅程。</p>
+        <a class="primary-btn" href="#discover">開始探索 <span>↗</span></a>
+      </div>
+      <div class="hero-note"><span>01 / 08</span><span>LOCAL FOOD STORIES</span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <div><p class="eyebrow dark">A JOURNEY OF FLAVORS</p><h2>苗栗的味道，<br>藏在每一條街巷裡。</h2></div>
+      <p class="intro-text">客家料理的鹹香、傳統市場的熱鬧、午後咖啡的悠閒。用一份美食地圖，發現苗栗不同角落的生活風景。</p>
+    </section>
+
+    <section class="discover section-wrap" id="discover">
+      <div class="section-heading">
+        <div><p class="eyebrow dark">FIND YOUR NEXT BITE</p><h2>今天想吃什麼？</h2></div>
+        <span class="result-count" id="resultCount">精選店家</span>
+      </div>
+      <div class="tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="搜尋店名、料理或地區…" aria-label="搜尋美食"></label>
+        <div class="filters" id="categoryFilters" aria-label="料理分類">
+          <button class="filter active" data-category="全部">全部</button>
+          <button class="filter" data-category="客家料理">客家料理</button>
+          <button class="filter" data-category="在地小吃">在地小吃</button>
+          <button class="filter" data-category="甜點咖啡">甜點咖啡</button>
+          <button class="filter" data-category="聚餐餐廳">聚餐餐廳</button>
+        </div>
+      </div>
+      <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>找不到符合的店家，試試其他關鍵字吧！</p>
+    </section>
+
+    <section class="region-section" id="regions">
+      <div class="section-wrap">
+        <div class="section-heading light-heading"><div><p class="eyebrow">EXPLORE BY AREA</p><h2>跟著地區，慢慢吃遍苗栗。</h2></div><p>每個鄉鎮，都有自己的招牌滋味。</p></div>
+        <div class="region-grid">
+          <button class="region-card" data-region="苗栗市"><span>01</span><strong>苗栗市</strong><small>巷弄小吃・人氣老店</small><b>↗</b></button>
+          <button class="region-card" data-region="三義"><span>02</span><strong>三義</strong><small>客家料理・山城風味</small><b>↗</b></button>
+          <button class="region-card" data-region="公館"><span>03</span><strong>公館</strong><small>粄條・傳統客家味</small><b>↗</b></button>
+          <button class="region-card" data-region="大湖"><span>04</span><strong>大湖</strong><small>草莓甜點・山城餐桌</small><b>↗</b></button>
+          <button class="region-card" data-region="頭份"><span>05</span><strong>頭份</strong><small>特色餐廳・聚餐首選</small><b>↗</b></button>
+          <button class="region-card" data-region="後龍"><span>06</span><strong>後龍</strong><small>海線鮮味・在地小吃</small><b>↗</b></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section" id="about">
+      <p class="eyebrow dark">A LITTLE NOTE</p>
+      <h2>旅行不一定要走很遠，<br><em>有時候，只要好好吃一頓。</em></h2>
+      <p>把苗栗的好味道收進口袋，下一次出發，就從這裡開始。</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">食</span><span>苗栗食旅誌<small>MIAOLI FOOD JOURNAL</small></span></a>
+    <p>探索在地風味，收藏生活日常。</p>
+    <small>© 2026 苗栗食旅誌 · 店家資訊請以官方公告為準</small>
+  </footer>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="關閉">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
